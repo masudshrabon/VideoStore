@@ -1,0 +1,87 @@
+Compiled from "Movie.java"
+public class rentalStore.Movie {
+  public static final int CHILDRENS;
+
+  public static final int REGULAR;
+
+  public static final int NEW_RELEASE;
+
+  private java.lang.String _title;
+
+  rentalStore.Price _price;
+
+  public rentalStore.Movie(java.lang.String, int);
+    Code:
+       0: aload_0       
+       1: invokespecial #20                 // Method java/lang/Object."<init>":()V
+       4: aload_0       
+       5: aload_1       
+       6: putfield      #23                 // Field _title:Ljava/lang/String;
+       9: aload_0       
+      10: iload_2       
+      11: invokevirtual #25                 // Method setPriceCode:(I)V
+      14: return        
+
+  public int getPriceCode();
+    Code:
+       0: aload_0       
+       1: getfield      #37                 // Field _price:LrentalStore/Price;
+       4: invokevirtual #39                 // Method rentalStore/Price.getPriceCode:()I
+       7: ireturn       
+
+  public void setPriceCode(int);
+    Code:
+       0: iload_1       
+       1: tableswitch   { // 0 to 2
+                     0: 28
+                     1: 56
+                     2: 42
+               default: 70
+          }
+      28: aload_0       
+      29: new           #43                 // class rentalStore/RegularPrice
+      32: dup           
+      33: invokespecial #45                 // Method rentalStore/RegularPrice."<init>":()V
+      36: putfield      #37                 // Field _price:LrentalStore/Price;
+      39: goto          80
+      42: aload_0       
+      43: new           #46                 // class rentalStore/ChildrensPrice
+      46: dup           
+      47: invokespecial #48                 // Method rentalStore/ChildrensPrice."<init>":()V
+      50: putfield      #37                 // Field _price:LrentalStore/Price;
+      53: goto          80
+      56: aload_0       
+      57: new           #49                 // class rentalStore/NewReleasePrice
+      60: dup           
+      61: invokespecial #51                 // Method rentalStore/NewReleasePrice."<init>":()V
+      64: putfield      #37                 // Field _price:LrentalStore/Price;
+      67: goto          80
+      70: new           #52                 // class java/lang/IllegalArgumentException
+      73: dup           
+      74: ldc           #54                 // String Incorrect Price Code
+      76: invokespecial #56                 // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+      79: athrow        
+      80: return        
+
+  double getCharge(int);
+    Code:
+       0: aload_0       
+       1: getfield      #37                 // Field _price:LrentalStore/Price;
+       4: iload_1       
+       5: invokevirtual #63                 // Method rentalStore/Price.getCharge:(I)D
+       8: dreturn       
+
+  public java.lang.String getTitle();
+    Code:
+       0: aload_0       
+       1: getfield      #23                 // Field _title:Ljava/lang/String;
+       4: areturn       
+
+  int getFrequentRenterPoints(int);
+    Code:
+       0: aload_0       
+       1: getfield      #37                 // Field _price:LrentalStore/Price;
+       4: iload_1       
+       5: invokevirtual #70                 // Method rentalStore/Price.getFrequentRenterPoints:(I)I
+       8: ireturn       
+}

@@ -1,0 +1,48 @@
+Compiled from "Rental.java"
+class rentalStore.Rental {
+  private rentalStore.Movie _movie;
+
+  private int _daysRented;
+
+  public rentalStore.Rental(rentalStore.Movie, int);
+    Code:
+       0: aload_0       
+       1: invokespecial #12                 // Method java/lang/Object."<init>":()V
+       4: aload_0       
+       5: aload_1       
+       6: putfield      #15                 // Field _movie:LrentalStore/Movie;
+       9: aload_0       
+      10: iload_2       
+      11: putfield      #17                 // Field _daysRented:I
+      14: return        
+
+  public double getCharge();
+    Code:
+       0: aload_0       
+       1: getfield      #15                 // Field _movie:LrentalStore/Movie;
+       4: aload_0       
+       5: getfield      #17                 // Field _daysRented:I
+       8: invokevirtual #27                 // Method rentalStore/Movie.getCharge:(I)D
+      11: dreturn       
+
+  public int getFrequentRenterPoints();
+    Code:
+       0: aload_0       
+       1: getfield      #15                 // Field _movie:LrentalStore/Movie;
+       4: aload_0       
+       5: getfield      #17                 // Field _daysRented:I
+       8: invokevirtual #34                 // Method rentalStore/Movie.getFrequentRenterPoints:(I)I
+      11: ireturn       
+
+  public int getDaysRented();
+    Code:
+       0: aload_0       
+       1: getfield      #17                 // Field _daysRented:I
+       4: ireturn       
+
+  public rentalStore.Movie getMovie();
+    Code:
+       0: aload_0       
+       1: getfield      #15                 // Field _movie:LrentalStore/Movie;
+       4: areturn       
+}

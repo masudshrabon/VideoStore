@@ -1,0 +1,32 @@
+Compiled from "Price.java"
+class rentalStore.ChildrensPrice extends rentalStore.Price {
+  rentalStore.ChildrensPrice();
+    Code:
+       0: aload_0       
+       1: invokespecial #8                  // Method rentalStore/Price."<init>":()V
+       4: return        
+
+  int getPriceCode();
+    Code:
+       0: iconst_2      
+       1: ireturn       
+
+  double getCharge(int);
+    Code:
+       0: ldc2_w        #18                 // double 1.5d
+       3: dstore_2      
+       4: iload_1       
+       5: iconst_3      
+       6: if_icmple     20
+       9: dload_2       
+      10: iload_1       
+      11: iconst_3      
+      12: isub          
+      13: i2d           
+      14: ldc2_w        #18                 // double 1.5d
+      17: dmul          
+      18: dadd          
+      19: dstore_2      
+      20: dload_2       
+      21: dreturn       
+}
